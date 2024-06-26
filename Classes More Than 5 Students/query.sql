@@ -9,3 +9,11 @@ WITH Tab1 AS (SELECT
  SELECT Tab1.class
  FROM Tab1
  WHERE Tab1.stud_count >= 5;
+
+
+-- Even better one 
+
+SELECT class
+FROM Courses
+GROUP BY class
+HAVING COUNT(student) >= 5;
